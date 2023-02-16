@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+
+body {
+    color: #333;
+    background-color: #f7f7f7;
+    font-size: 1.25em;
+    font-family: 'Barlow';
+    text-align: center;
+
+}
+
+ol,
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    width: 1px;
+    height: 1px;
+}
+
+.section-container {
+    background-color: white;
+    padding: 32px;
+    border-radius: 50px;
+
+}
+
+.verticalMenu {
+    height: 100vh;
+    background-color: #A2D9CE;
+    position: fixed;
+    color: white;
+
+}
+
+.verticalMenu nav {
+    padding: 20px;
+}
+
+.verticalMenu nav span {
+    font-size: 1.2rem;
+}
+
+.verticalMenu nav a {
+    padding: 13px;
+    display: inline-block;
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+.verticalMenu nav a:hover,
+.verticalMenu nav a:focus {
+    background-color: #45B39D;
+}
+
+.mainWrapper {
+    width: calc(100% - 90px);
+    margin-left: 90px;
+    overflow: hidden;
+
+}
+
+.pageWrapper {
+    margin: 0 auto;
+
+}
+
+.homeImg {
+    flex: 0 0 50%;
+    width: 100%;
+    padding: 0 0 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.homeImg img {
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 350px;
+    height: 350px;
+    box-shadow: 12px 0 #d9c8f1 24px 0 #e2d6f3 36px 0 #ece6f5;
+
+
+}
+
+.homeWelcome {
+    flex: 0 0 50%;
+    width: 100%;
+    padding: 0 10px;
+
+}
+
+.aboutSection{
+    
+    font-weight: 600;
+}
+
+.aboutSection a {
+    color: #45B39D;
+}
+
+
+footer {
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+
+}
