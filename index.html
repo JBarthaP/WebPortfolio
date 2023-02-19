@@ -14,14 +14,15 @@
 
 <body>
     <section id="home" class="hidden"></section>
-    <aside class="verticalMenu" id="sidebar">
+    <aside class="verticalMenu showSidebar" id="sidebar">
         <nav>
             <ul>
                 <li class="navItem"><a href="#home"><span class="material-icons">home</span>HOME</a></li>
                 <li class="navItem"><a href="#about"><span class="material-icons">account_box</span>ABOUT ME</a></li>
                 <li class="navItem"><a href="#skills"><span class="material-icons">psychology</span>SKILLS</a></li>
                 <li class="navItem"><a href="#projects"><span class="material-icons">web</span>PROJECTS</a></li>
-                <li class="navItem"><a href="#contact"><span class="material-icons">connect_without_contact</span>CONTACT</a></li>
+                <li class="navItem"><a href="#contact"><span
+                            class="material-icons">connect_without_contact</span>CONTACT</a></li>
 
             </ul>
 
@@ -33,22 +34,28 @@
         <div class="mainWrapper">
             <div class="pageWrapper">
                 <header id="header" class="row">
-                    <div class="homeImg col-6">
+                    <div class="homeImg col-lg-6 col-md-8">
                         <img src="assets/img/me.jpg" alt="A picture of José Luis Bartha">
                     </div>
-                    <div class="homeWelcome col-6">
+                    <div class="homeWelcome col-lg-6 col-md-4">
                         <p class="welcome">HI THERE! IM</p>
-                        <h2>José Luis Bartha</h2>
-                        <p>almost a Full Stack Developer passionate about complex and fun applications on the web</p>
+                        <h1>José Luis Bartha</h1>
+                        <p>almost a Full Stack Developer passionate about making complex and fun applications on the web
+                        </p>
                         <div class="documents">
                             <a class="curriculum" href="/assets/docs/CurriculumJoseLuisBartha.pdf">Curriculum</a>
-                            <a><img src="assets/img/github.png"></a>
+                            <a href="https://github.com/JBarthaP"><img src="assets/img/github.png"></a>
+                            <a href="www.linkedin.com/in/joséluis-barthadelaspeñas"><img
+                                    src="assets/img/linkedin.png"></a>
                         </div>
                     </div>
                 </header>
                 <main>
                     <section id="about" class="aboutSection row">
-                        <h3>ABOUT ME</h3>
+                        <div class="titleSection">
+                            <h6>Know</h6>
+                            <h3>ABOUT ME</h3>
+                        </div>
                         <p class="section-container col-md-12">I'm currently a student of Software Engineering
                             in the <a href="https://www.ucm.es/">Universidad
                                 Complutense de Madrid</a> that will hopefully finish my studies towards the middle of
@@ -60,44 +67,146 @@
                             and learn much more things with any team. </p>
                     </section>
                     <section id="skills" class="skillsSection">
-                        <h6>Explore about my</h6>
-                        <h3>SKILLS</h3>
+                        <div class="titleSection">
+                            <h6>Explore about my</h6>
+                            <h3>SKILLS</h3>
+                        </div>
                         <div class="gridSkills section-container">
                             <h5>Programming Languages</h5>
-                            <ul class="row row-cols-2">
-                                <li class="col">Python</li>
-                                <li class="col">JavaScript</li>
-                                <li class="col">Java</li>
-                                <li class="col">C++</li>
-                                <li class="col">SQL</li>
-                                <li class="col">MongoDB</li>
+                            <ul class="gridList">
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/python.png">
+                                        <p>Python</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/javascript.svg">
+                                        <p>JavaScript</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/java.png">
+                                        <p>Java</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/c++.png">
+                                        <p>C++</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/sql.png">
+                                        <p>SQL</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/mongodb.png">
+                                        <p>MongoDB</p>
+                                    </div>
+                                </li>
 
 
                             </ul>
                         </div>
                         <div class="gridSkills section-container">
                             <h5>Editors and MarkUp Languages</h5>
-                            <ul class="row row-cols-2">
-                                <li class="col">HTML</li>
-                                <li class="col">CSS</li>
-                                <li class="col">Markdown</li>
-                                <li class="col">VSCode</li>
-                                <li class="col">VStudio</li>
-                                <li class="col">Eclipse</li>
+                            <ul class="gridList">
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/html.svg">
+                                        <p>HTML</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/css.svg">
+                                        <p>CSS</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/markdown.png">
+                                        <p>Markdown</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/vscode.svg">
+                                        <p>VSCode</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/vstudio.png">
+                                        <p>VStudio</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/eclipse.svg">
+                                        <p>Eclipse</p>
+                                    </div>
+                                </li>
                             </ul>
 
                         </div>
                         <div class="gridSkills section-container">
                             <h5>Frameworks</h5>
-                            <ul class="row row-cols-2">
-                                <li class="col">Django</li>
-                                <li class="col">Django REST API</li>
-                                <li class="col">React</li>
-                                <li class="col">Express JS</li>
-                                <li class="col">Bootstrap</li>
-                                <li class="col">Spring Framework</li>
-                                <li class="col">Android Studio</li>
-                                <li class="col">Phaser 3</li>
+                            <ul class="gridList">
+                                <li class="col" data-bs-toggle="">
+                                    <div class="">
+                                        <img src="/assets/img/skills/django.png">
+                                        <p>Django</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/djangoRest.png">
+                                        <p>Django REST API</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/react.svg">
+                                        <p>React</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/Expressjs.png">
+                                        <p>Express JS</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/bootstrap.svg">
+                                        <p>Bootstrap</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/spring.svg">
+                                        <p>Spring Framework</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/android.png">
+                                        <p>Android Studio</p>
+                                    </div>
+                                </li>
+                                <li class="col">
+                                    <div>
+                                        <img src="/assets/img/skills/phaser 3.png">
+                                        <p>Phaser 3</p>
+                                    </div>
+                                </li>
 
                             </ul>
 
@@ -105,43 +214,50 @@
 
                     </section>
                     <section id="projects" class="section-container">
-                        <h6>TAKE A LOOK AT MY</h6>
-                        <h3>PROJECTS</h3>
-                        <article class="projectsSection section-container">
-                            <div class="projectImg">
-                                <img src="" alt="">
+                        <div class="titleSection">
+                            <h6>TAKE A LOOK AT MY</h6>
+                            <h3>PROJECTS</h3>
+                        </div>
+                        <article class="projectsSection section-container row">
+                            <div class="col-md-6 projectImg">
+                                <img src="assets/img/qwizer.PNG" alt="A picture from Qwizer-UCM">
                             </div>
-                            <div class="projectDescription">
+                            <div class="col-md-5 projectDescription">
                                 <h3>Qwizer</h3>
-                                <h4>Tecnologies Used: <a>Django</a>&nbsp;<a>React</a>&nbsp;<a>Docker</a></h4>
+                                <h4>Tecnologies Used: <a>Django</a>&nbsp;, <a>React</a>&nbsp;, <a>Docker</a></h4>
                                 <ul>
                                     <li>A PWA(Progressive Web App) focus on completing accademic tests</li>
-                                    <li>The applications allows students to complete their tests either they have connection to Internet or not</li>
+                                    <li>The applications allows students to complete their tests either they have
+                                        connection to Internet or not</li>
                                     <li>Project bound to my degree final project</li>
 
 
                                 </ul>
-                                <div>
-                                    <a href="https://github.com/Qwizer-UCM/Qwizer" class="repository-link">Repository</a>
+                                <div class="links">
+                                    <a href="https://github.com/Qwizer-UCM/Qwizer"
+                                        class="repository-link">Repository</a>
                                 </div>
                             </div>
                         </article>
-                        <article class="projectsSection section-container">
-                            <div class="projectImg">
+                        <article class="projectsSection section-container row">
+                            <div class="projectImg col-md-6">
                                 <img src="/assets/img/knightmares.png" alt="Picture from Knightmares">
                             </div>
-                            <div class="projectDescription">
+                            <div class="projectDescription col-md-5">
                                 <h3 class="projectTitle">Knightmares</h3>
-                                <h4>Tecnologies Used: <a>JavaScript</a> &nbsp; <a>Phaser</a></h4>
+                                <h4>Tecnologies Used: <a>JavaScript</a> &nbsp;, <a>Phaser</a></h4>
                                 <ul>
                                     <li>Videogame project made with the Phaser.Io framework</li>
-                                    <li>Phaser 3 framework allows developers to make videogames using web technologies such as HTML 5 and JavaScript</li>
+                                    <li>Phaser 3 framework allows developers to make videogames using web technologies
+                                        such as HTML 5 and JavaScript</li>
                                     <li>Knightmares is a game that combines top-down and scrollbar gameplay </li>
-  
-                                    
+
+
                                 </ul>
-                                <div>
-                                    <a href="https://github.com/iQuickJP/DVIJuego" class="repository-link">Repository</a>
+                                <div class="links">
+                                    <a href="https://github.com/iQuickJP/DVIJuego"
+                                        class="repository-link">Repository</a><span></span> ,
+                                    </span>
                                     <a href="https://iquickjp.github.io/DVIJuego/" class="live-link">Live</a>
                                 </div>
                             </div>
@@ -149,16 +265,19 @@
 
 
                     </section>
-                    <section id="contact" class="section-container">
-                        <h5>SAY HELLO</h5>
-                        <h3>CONTACT</h3>
-                        <h4>Get in Touch with me</h4>
-
-                        <p class="emailContact row">
-                            <span class="material-icons">mail</span>
-                            <a href="mailto:jbarthap@gmail.com">jbarthap@gmail.com</a>
-                        <p>Email me</p>
-                        </p>
+                    <section id="contact">
+                        <div class="title">
+                            <h5>SAY HELLO</h5>
+                            <h3>CONTACT</h3>
+                            <h4>Get in Touch with me</h4>
+                        </div>
+                        <div class="section-container">
+                            <p class="emailContact row">
+                                <span class="material-icons">mail</span>
+                                <a href="mailto:jbarthap@gmail.com">jbarthap@gmail.com</a>
+                            <p>Email me</p>
+                            </p>
+                        </div>
                     </section>
                 </main>
             </div>

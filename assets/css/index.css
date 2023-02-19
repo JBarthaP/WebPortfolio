@@ -24,6 +24,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .hidden {
@@ -45,16 +46,19 @@ header {
 }
 
 .menuButton {
-    font-size: 3.5rem;
-    float: right;
-    position: fixed;
-    right: 90%;
-    cursor: pointer;
+    display: none;
+}
+
+.showSidebar {
+    left: 0;
+}
+
+.hideSidebar {
+    left: -300px;
 }
 
 .verticalMenu {
     height: 100vh;
-    width: 0;
     background-color: #A2D9CE;
     position: fixed;
     overflow-x: hidden;
@@ -65,6 +69,7 @@ header {
 
 }
 
+
 .verticalMenu nav {
     padding: 20px;
 }
@@ -74,9 +79,10 @@ header {
 }
 
 .verticalMenu nav a {
-    padding: 13px;
+    padding: 10px;
     display: inline-block;
     margin-bottom: 15px;
+    width: 100%;
     border-radius: 2px;
     transition: 0.3s;
     font-size: 1.rem;
@@ -90,7 +96,8 @@ header {
 
 .mainWrapper {
     width: calc(100% - 90px);
-    margin-left: 90px;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
 
 }
@@ -120,7 +127,7 @@ header {
     margin: 0 auto;
     width: 350px;
     height: 350px;
-    box-shadow: 12px 0 #d9c8f1 24px 0 #e2d6f3 36px 0 #ece6f5;
+    box-shadow: 12px 0 #c8e7f1, 24px 0 #d6f3ef, 36px 0 #e6f5f3;
 
 
 }
@@ -131,6 +138,59 @@ header {
     padding: 0 10px;
 
 }
+
+.welcome {
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.homeWelcome h1 {
+    font-weight: bold;
+    color: #45B39D !important;
+}
+
+.documents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.documents a {
+    margin: 10px;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.5s ease-in;
+}
+
+.documents a:hover {
+    border: 2px solid #444;
+    box-shadow: 0.5rem 0.5rem 1rem #ccc, -0.5rem -0.5rem 1rem #fff;
+}
+
+.curriculum {
+    background-color: #A2D9CE !important;
+    border-radius: 15px;
+    border: 2px solid #444;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+
+}
+
+.curriculum:hover,
+.curriculum:focus {
+    color: inherit;
+}
+
+.homeWelcome img {
+    width: 35px;
+    height: 35px;
+}
+
 
 .aboutSection {
     font-size: 1.5rem;
@@ -143,7 +203,7 @@ header {
     color: #45B39D;
 }
 
-.skillsSection{
+.skillsSection {
     font-weight: 700;
 }
 
@@ -152,12 +212,14 @@ header {
 
 }
 
-.gridSkills li{
+.gridSkills li {
+    width: 80px;
     font-weight: bold;
     color: #444;
-    font-size: 1rem;
-    padding: 1rem 1.5rem;
-    margin-bottom: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 10px;
+    margin: 1rem;
     border: 2px solid #eee;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -166,38 +228,73 @@ header {
 
 }
 
+.gridSkills li p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.gridSkills li img {
+    width: 35px;
+    height: 35px;
+
+}
+
+.gridList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    column-gap: 25px;
+    row-gap: 50px;
+}
+
+
 .projectsSection {
-    border-radius: 15px ;
+    border-radius: 15px;
     margin-bottom: 20px;
     padding: 0.5rem;
+    font-size: 1rem;
     border: 1px solid #eee;
 }
+
+
 
 .projectTitle {
     font-weight: 900;
 }
 
 .projectImg img {
-    border-radius: 10%;
+    width: 100%;
+    border-radius: 5%;
     margin: 0 auto;
-    box-shadow: 12px 0 #d9c8f1 24px 0 #e2d6f3 36px 0 #ece6f5;
+    border: 1px solid transparent;
 }
 
-.projectDescription{
+.projectDescription {
     margin-top: 20px;
     padding: 10px;
     font-weight: 400;
     margin: 1rem;
 }
 
-.projectDescription ul{
-    list-style: disc;
+.projectDescription ul {
+    list-style: disc inside;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin-top: 10px;
 
+
+}
+
+.projectDescription ul li {
+    margin-top: 10px;
 }
 
 .projectDescription a {
     color: #45B39D !important;
     font-weight: 600;
+}
+
+.links a {
+    text-decoration: dashed #333 !important;
 }
 
 .emailContact {
@@ -216,4 +313,33 @@ footer {
     padding: 20px;
     background-color: white;
 
+}
+
+@media (max-width: 768px) {
+
+    .mainWrapper {
+        margin: 0;
+        width: 100%;
+    }
+
+
+    .homeImg img {
+        width: 250px;
+        height: 250px;
+        box-shadow: 12px 0 #c8e7f1;
+    }
+
+    .menuButton {
+        display: block;
+        font-size: 3rem;
+        float: right;
+        position: fixed;
+        right: 90%;
+        cursor: pointer;
+    }
+
+    .gridList {
+        row-gap: 15px;
+        column-gap: 15px;
+    }
 }

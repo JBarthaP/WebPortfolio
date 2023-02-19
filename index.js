@@ -1,20 +1,36 @@
+let opensidebar = true
+
 function hideorshowNav() {
-   console.log(document.getElementById("sidebar").style.width );
-    document.getElementById("sidebar").style.width = document.getElementById("sidebar").style.width ==="0px" ||  document.getElementById("sidebar").style.width ==="" ? "200px" : "0" 
+   if(!opensidebar) {
+      document.getElementById("sidebar").classList.add("showSidebar")
+      document.getElementById("sidebar").classList.remove("hideSidebar")
+      opensidebar = true
+   }
+   else {
+    document.getElementById("sidebar").classList.add("hideSidebar")
+    document.getElementById("sidebar").classList.remove("showSidebar")
+    opensidebar = false
+      
+   } 
 }
 
 function checkMenu(){
-     
-     if( window.innerWidth >= "1025") {
-        document.getElementById("header").classList.add("flex-row")
-        document.getElementById("header").classList.remove("flex-column")
+     if( window.innerWidth >= "900") {
+        document.getElementById("sidebar").classList.add("showSidebar")
+        document.getElementById("sidebar").classList.remove("hideSidebar")
+        opensidebar = true
+
      }
      else {
-        document.getElementById("header").classList.add("flex-column")
-        document.getElementById("header").classList.remove("flex-row")
+      document.getElementById("sidebar").classList.add("hideSidebar")
+      document.getElementById("sidebar").classList.remove("showSidebar")
+      opensidebar = false
         
      } 
 }
 
 window.addEventListener('resize', () => checkMenu())
 window.addEventListener('load', () => checkMenu())
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
