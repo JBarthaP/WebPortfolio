@@ -60,8 +60,9 @@ header {
 .verticalMenu {
     height: 100vh;
     background-color: #A2D9CE;
+    width: 105px;
+    overflow: hidden;
     position: fixed;
-    overflow-x: hidden;
     color: white;
     transition: 0.5s;
     display: flex;
@@ -69,14 +70,23 @@ header {
 
 }
 
-
 .verticalMenu nav {
     padding: 20px;
+
 }
 
 .verticalMenu nav span {
     font-size: 2rem;
 }
+
+.verticalMenu nav .nav-label {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    position: relative;
+    top: -10px;
+}
+
+
 
 .verticalMenu nav a {
     padding: 10px;
@@ -85,7 +95,7 @@ header {
     width: 100%;
     border-radius: 2px;
     transition: 0.3s;
-    font-size: 1.rem;
+    font-size: 0.7rem;
 }
 
 .verticalMenu nav a:hover,
@@ -112,6 +122,10 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
+}
+
+main section {
+    padding: 80px 0;
 }
 
 .homeImg {
@@ -241,7 +255,7 @@ header {
 
 .gridList {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     column-gap: 25px;
     row-gap: 50px;
 }
@@ -317,6 +331,11 @@ footer {
 
 @media (max-width: 768px) {
 
+    .verticalMenu, .verticalMenu:hover {
+        width: 205px;
+        height: 100%;
+    }
+
     .mainWrapper {
         margin: 0;
         width: 100%;
@@ -342,4 +361,20 @@ footer {
         row-gap: 15px;
         column-gap: 15px;
     }
+}
+
+@media (min-width: 768px) {
+
+    .nav-label {
+        display: none;
+    }
+
+    .verticalMenu:hover {
+        width: calc(15% - 20px);
+    }
+    
+    .verticalMenu:hover .nav-label {
+        display: inline-block;
+    }
+    
 }
