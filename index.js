@@ -33,7 +33,7 @@ window.addEventListener('resize', () => checkMenu())
 window.addEventListener('load', () => checkMenu())
 
 document.addEventListener('click', function(e) {
-   if(e.target.classList[0] === "nav-label"|| e.target.classList[0] === "materials-icons") hideorshowNav()
+   if(window.innerWidth < 768 && (e.target.classList[0] === "navItem" ||  e.target.classList[0] === "nav-label"|| e.target.classList[0] === "material-icons")) hideorshowNav()
 })
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
