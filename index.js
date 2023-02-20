@@ -15,7 +15,7 @@ function hideorshowNav() {
 }
 
 function checkMenu(){
-     if( window.innerWidth >= "900") {
+     if( window.innerWidth >= "768") {
         document.getElementById("sidebar").classList.add("showSidebar")
         document.getElementById("sidebar").classList.remove("hideSidebar")
         opensidebar = true
@@ -31,6 +31,10 @@ function checkMenu(){
 
 window.addEventListener('resize', () => checkMenu())
 window.addEventListener('load', () => checkMenu())
+
+document.addEventListener('click', function(e) {
+   if(e.target.classList[0] === "nav-label"|| e.target.classList[0] === "materials-icons") hideorshowNav()
+})
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
